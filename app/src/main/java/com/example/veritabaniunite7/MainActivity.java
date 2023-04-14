@@ -31,5 +31,23 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(uyg);
             }
         });
+
+        uyg3 = findViewById(R.id.btn3);
+        uyg3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent uyg = new Intent(MainActivity.this, Uygulama3.class);
+                startActivity(uyg);
+            }
+        });
+
+        uyg4 = findViewById(R.id.btn4);
+        uyg4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent uyg = new Intent(MainActivity.this, Uygulama4.class);
+                startActivity(uyg);
+            }
+        });
     }
 }
