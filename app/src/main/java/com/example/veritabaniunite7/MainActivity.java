@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteStatement;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         createDB();
+        insertDB();
+        updateDB();
 
         uyg1 = findViewById(R.id.btn1);
         uyg1.setOnClickListener(new View.OnClickListener() {
@@ -67,6 +70,22 @@ public class MainActivity extends AppCompatActivity {
                 "adet INTEGER)";
 
         database.execSQL(TABLO);
+    }
 
+    private void insertDB()
+    {
+        SQLiteStatement results = database.compileStatement("INSERT INTO urunler (urunadi,fiyat,adet) VALUES (?,?,?)");
+        results.bindString(1,"Bilgisayar");
+        results.bindDouble(2,1500);
+        results.bindLong(3,10);
+        results.execute();
+    }
+    private void updateDB()
+    {
+        SQLiteStatement results = database.compileStatement("UPDATE urunler SET urunadi = ?, fiyat = ? WHERE id = ?");
+        results.bindString(1,"leptop");
+        results.bindDouble(2,2000);
+        results.bindLong(3,1);
+        results.execute();
     }
 }
