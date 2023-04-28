@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         createDB();
-        insertDB();
-        updateDB();
+        //insertDB();
+       // updateDB();
 
         uyg1 = findViewById(R.id.btn1);
         uyg1.setOnClickListener(new View.OnClickListener() {
