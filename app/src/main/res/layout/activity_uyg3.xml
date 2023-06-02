@@ -4,32 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Uygulama3">
-
+    tools:context=".Uyg3Activity">
 
     <ListView
-        android:id="@+id/urunListe"
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        app:layout_constraintBottom_toBottom0f="parent"
+        android:id="@+id/Uyg3ListView"
+        android:layout_width="372dp"
+        android:layout_height="451dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEnd0f="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTop0f="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.069"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.121" />
 
     <Button
-        android:id="@+id/btnkayitEkle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:onclick="btnYeniKayitEkleClick" android:text="Yeni Kayıt Ekle"
+        android:id="@+id/Uyg3EkleBtn"
+        android:layout_width="149dp"
+        android:layout_height="53dp"
+        android:onClick="EkleClick"
+        android:text="Ekle"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/urunListe" />
+        app:layout_constraintTop_toBottomOf="@+id/Uyg3ListView"
+        app:layout_constraintVertical_bias="0.297" />
 </androidx.constraintlayout.widget.ConstraintLayout>
